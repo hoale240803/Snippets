@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Controller Class</Title>
+      <Shortcut>wooclasscontroller</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+		
+		[Route("api/[controller]")]
+	[Authorize]
+	public class ProspectTaskController : ApiBaseController
+	{
+		private readonly IProspectTaskService _prospectTaskService;
+		private readonly IMapper _mapper;
+
+		public ProspectTaskController(IProspectTaskService prospectTaskservice, IMapper mapper)
+		{
+			_prospectTaskService = prospectTaskservice;
+			_mapper = mapper;
+		}
+
+		[HttpPost("getList")]
+		public async Task<GridBaseModel<ProspectTask>> GetProspectTasks([FromBody] RequestGetProspectTaskModels model)
+		{
+			var accountId = AccountId;
+			return await _prospectTaskService.GetProspectTasks(model, accountId);
+		}
+
+		[HttpPost("create")]
+		public async Task<ResponseCreateProspectTaskModel> CreateProspectTask([FromBody] RequestCreateProspectTaskModel createModel)
+		{
+			var accountId = AccountId;
+			return await _prospectTaskService.CreateTask(createModel, accountId);
+		}
+
+		[HttpPut]
+		public async Task<ResponseUpdateProspectTaskModel> UpdateProspectTask([FromBody] RequestUpdateProspectTaskModel updateModel)
+		{
+			var accountId = AccountId;
+			return await _prospectTaskService.UpdateTask(updateModel, accountId);
+		}
+
+		[HttpDelete]
+		public async Task<ResponseDeleteProspectTaskModel> DeleteProspectTask([FromBody] RequestDeleteProspectTaskModel deleteModel)
+		{
+			var accountId = AccountId;
+			return await _prospectTaskService.DeleteTask(deleteModel, accountId);
+		}
+
+		[HttpGet("getOne")]
+		public async Task<ResponseGetOneProspectTaskModel> GetOneProspectTask([FromQuery] RequestGetOneProspectTaskModel prospectFilter)
+		{
+			var prospectTaskToResponse = await _prospectTaskService.Get(prospectFilter.ProspectId);
+			return _mapper.Map<ResponseGetOneProspectTaskModel>(prospectTaskToResponse);
+		}
+
+		[HttpPut("markIsCompleted")]
+		public async Task<ResponseMarkIsCompletedModel> MarkIsCompleted([FromBody] RequestMarkIsCompleteModel markIsCompletedModel)
+		{
+			var accountId = AccountId;
+			return await _prospectTaskService.MarkIsCompleted(markIsCompletedModel, accountId);
+		}
+		]]>
+      </Code>
+
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

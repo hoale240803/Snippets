@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Repository Get List filter</Title>
+      <Shortcut>repogetfilter</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+public static async Task<GridBaseModel<CampaignGridModel>> GetCampaignList(this IRepository<Campaign> repository, CampaignFilterParams campaignFilter)
+		{
+			var containSearchPattern = DatabaseHelper.GenerateSearchRegex(campaignFilter.Keyword);
+			var filter = Builders<Campaign>.Filter.And(Builders<Campaign>.Filter.Eq(_ => _.AccountId, campaignFilter.AccountId),
+				Builders<Campaign>.Filter.Eq(_ => _.IsDeleted, false),
+				Builders<Campaign>.Filter.Regex(_ => _.Name, containSearchPattern)
+			);
+
+			var sort = campaignFilter.SortType == Sort.Asc
+				? Builders<Campaign>.Sort.Ascending(campaignFilter.SortColumn)
+				: Builders<Campaign>.Sort.Descending(campaignFilter.SortColumn);
+
+			var totalCount = await repository.Collection.Find(filter).CountDocumentsAsync();
+
+			var findFluent = repository.Collection.Find(filter)
+				.Sort(sort)
+				.Skip(campaignFilter.Skip)
+				.Limit(campaignFilter.Take)
+				.Project(_ => new CampaignGridModel
+				{
+					Id = _.Id,
+					Name = _.Name,
+					TotalProspect = _.TotalContact,
+					// Only show error on grid if woo response is enable
+					IsWooResponseHasError = _.IsWooResponseEnabled() && _.IsCampaignWooResponseHasError(),
+					CreatedAt = _.CreatedAt,
+					CreatedBy = _.CreatedBy,
+					CreatedByFullName = _.CreatedBy,
+					UpdatedAt = _.UpdatedAt,
+					UpdatedBy = _.UpdatedBy,
+					DeletedAt = _.DeletedAt,
+					DeletedBy = _.DeletedBy,
+					IsDeleted = _.IsDeleted
+				});
+
+			return new GridBaseModel<CampaignGridModel>
+			{
+				TotalCount = new List<GridTotalCount> { new GridTotalCount { Count = totalCount } },
+				Records = await findFluent.ToListAsync()
+			};
+		}
+		]]>
+      </Code>
+
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
+
