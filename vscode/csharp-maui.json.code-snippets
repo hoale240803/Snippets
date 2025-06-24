@@ -1,0 +1,162 @@
+{
+  "MAUI ContentPage": {
+    "prefix": "maui-page",
+    "body": [
+      "<ContentPage xmlns=\"http://schemas.microsoft.com/dotnet/2021/maui\"",
+      "             xmlns:x=\"http://schemas.microsoft.com/winfx/2009/xaml\"",
+      "             x:Class=\"${1:Namespace}.${2:PageName}\">",
+      "    <VerticalStackLayout>",
+      "        ${0:<!-- Content goes here -->}",
+      "    </VerticalStackLayout>",
+      "</ContentPage>"
+    ],
+    "description": "Basic MAUI ContentPage with VerticalStackLayout"
+  },
+
+  "MAUI ViewModel": {
+    "prefix": "maui-vm",
+    "body": [
+      "using CommunityToolkit.Mvvm.ComponentModel;",
+      "",
+      "namespace ${1:Namespace}.ViewModels;",
+      "",
+      "[ObservableObject]",
+      "public partial class ${2:ViewModelName} : BaseViewModel",
+      "{",
+      "    [ObservableProperty]",
+      "    private ${3:string} ${4:propertyName};",
+      "    ",
+      "    [RelayCommand]",
+      "    private async Task ${5:MethodName}()",
+      "    {",
+      "        ${0:// Command logic}",
+      "    }",
+      "}"
+    ],
+    "description": "MAUI ViewModel with CommunityToolkit.Mvvm"
+  },
+
+  "MAUI Binding": {
+    "prefix": "maui-bind",
+    "body": [
+      "<${1:Label} Text=\"{Binding ${2:PropertyName}}\"$0 />"
+    ],
+    "description": "XAML data binding"
+  },
+
+  "MAUI Command": {
+    "prefix": "maui-cmd",
+    "body": [
+      "<Button Text=\"${1:Click Me}\" ",
+      "        Command=\"{Binding ${2:CommandName}}\"$0 />"
+    ],
+    "description": "XAML command binding"
+  },
+
+  "MAUI DI Registration": {
+    "prefix": "maui-di",
+    "body": [
+      "builder.Services.AddTransient<${1:IService}, ${2:Service}>();$0"
+    ],
+    "description": "Dependency injection registration"
+  },
+
+  "MAUI Platform Code": {
+    "prefix": "maui-platform",
+    "body": [
+      "#if ${1:ANDROID}",
+      "    ${0:// Android-specific code}",
+      "#elif ${2:IOS}",
+      "    // iOS-specific code",
+      "#elif ${3:WINDOWS}",
+      "    // Windows-specific code",
+      "#endif"
+    ],
+    "description": "Platform-specific code blocks"
+  },
+
+  "MAUI Style": {
+    "prefix": "maui-style",
+    "body": [
+      "<Style TargetType=\"${1:Label}\">",
+      "    <Setter Property=\"${2:TextColor}\" Value=\"${3:Black}\" />",
+      "    <Setter Property=\"${4:FontSize}\" Value=\"${5:14}\" />",
+      "    $0",
+      "</Style>"
+    ],
+    "description": "XAML style definition"
+  },
+
+  "MAUI Converters": {
+    "prefix": "maui-converter",
+    "body": [
+      "public class ${1:ConverterName} : IValueConverter",
+      "{",
+      "    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)",
+      "    {",
+      "        ${0:// Conversion logic}",
+      "    }",
+      "",
+      "    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)",
+      "    {",
+      "        ${2:// Reverse conversion logic}",
+      "    }",
+      "}"
+    ],
+    "description": "Value converter implementation"
+  },
+
+  "MAUI CollectionView": {
+    "prefix": "maui-collection",
+    "body": [
+      "<CollectionView ItemsSource=\"{Binding ${1:Items}}\">",
+      "    <CollectionView.ItemTemplate>",
+      "        <DataTemplate>",
+      "            <${2:Label} Text=\"{Binding ${3:Name}}\" />",
+      "        </DataTemplate>",
+      "    </CollectionView.ItemTemplate>",
+      "</CollectionView>$0"
+    ],
+    "description": "CollectionView with data binding"
+  },
+
+  "MAUI Shell Route": {
+    "prefix": "maui-route",
+    "body": [
+      "<ShellContent Title=\"${1:Page}\" ",
+      "              Route=\"${2:route}\" ",
+      "              ContentTemplate=\"{DataTemplate ${3:PageType}}\" />$0"
+    ],
+    "description": "Shell navigation route registration"
+  },
+
+  "MAUI FlyoutItem": {
+    "prefix": "maui-flyout",
+    "body": [
+      "<FlyoutItem Title=\"${1:Section}\">",
+      "    <ShellContent Route=\"${2:route}\" ",
+      "                 ContentTemplate=\"{DataTemplate ${3:PageType}}\" />",
+      "</FlyoutItem>$0"
+    ],
+    "description": "Shell flyout menu item"
+  },
+
+  "MAUI Behavior": {
+    "prefix": "maui-behavior",
+    "body": [
+      "public class ${1:BehaviorName} : Behavior<${2:View}>",
+      "{",
+      "    protected override void OnAttachedTo(${2:View} bindable)",
+      "    {",
+      "        ${0:// Setup code}",
+      "    }",
+      "",
+      "    protected override void OnDetachingFrom(${2:View} bindable)",
+      "    {",
+      "        ${3:// Cleanup code}",
+      "    }",
+      "}"
+    ],
+    "description": "View behavior implementation"
+  }
+}

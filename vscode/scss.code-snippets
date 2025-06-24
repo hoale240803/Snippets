@@ -1,0 +1,159 @@
+{
+  "snippets": {
+    "scss-nesting": {
+      // "scope": "scss",
+      "scope": "scss",
+      "prefix": "scss-nesting",
+      "body": [
+        "$1 {",
+        "  $2: $3;",
+        "  &:hover {",
+        "    $4: $5;",
+        "  }",
+        "}"
+      ],
+      "description": "SCSS Nesting with Hover"
+    },
+    "scss-variable": {
+      "scope": "scss",
+      "prefix": "scss-var",
+      "body": [
+        "$${1:var-name}: $2;"
+      ],
+      "description": "SCSS Variable"
+    },
+    "scss-mixin": {
+      "scope": "scss",
+      "prefix": "scss-mixin",
+      "body": [
+        "@mixin $1($2) {",
+        "  $3: $4;",
+        "}"
+      ],
+      "description": "SCSS Mixin Definition"
+    },
+    "scss-include": {
+      "scope": "scss",
+      "prefix": "scss-include",
+      "body": [
+        "@include $1($2);"
+      ],
+      "description": "SCSS Mixin Include"
+    },
+    "scss-extend": {
+      "scope": "scss",
+      "prefix": "scss-extend",
+      "body": [
+        "@extend $1;"
+      ],
+      "description": "SCSS Extend Placeholder"
+    },
+    "scss-placeholder": {
+      "scope": "scss",
+      "prefix": "scss-placeholder",
+      "body": [
+        "%$1 {",
+        "  $2: $3;",
+        "}"
+      ],
+      "description": "SCSS Placeholder Selector"
+    },
+    "scss-if": {
+      "scope": "scss",
+      "prefix": "scss-if",
+      "body": [
+        "@if $1 {",
+        "  $2",
+        "} @else {",
+        "  $3",
+        "}"
+      ],
+      "description": "SCSS @if condition"
+    },
+    "scss-each": {
+      "scope": "scss",
+      "prefix": "scss-each",
+      "body": [
+        "@each $item in $list {",
+        "  $1",
+        "}"
+      ],
+      "description": "SCSS @each loop"
+    },
+    "scss-for": {
+      "scope": "scss",
+      "prefix": "scss-for",
+      "body": [
+        "@for $i from $1 through $2 {",
+        "  $3",
+        "}"
+      ],
+      "description": "SCSS @for loop"
+    },
+    "scss-map": {
+      "scope": "scss",
+      "prefix": "scss-map",
+      "body": [
+        "$map-name: (",
+        "  $1: $2,",
+        "  $3: $4",
+        ");"
+      ],
+      "description": "SCSS Map Definition"
+    },
+    "scss-map-get": {
+      "scope": "scss",
+      "prefix": "scss-map-get",
+      "body": [
+        "map-get($map-name, $key);"
+      ],
+      "description": "SCSS Map Get"
+    },
+    "scss-media": {
+      "scope": "scss",
+      "prefix": "scss-media",
+      "body": [
+        "@media (max-width: $1px) {",
+        "  $2 {",
+        "    $3: $4;",
+        "  }",
+        "}"
+      ],
+      "description": "SCSS Media Query"
+    },
+    "scss-function": {
+      "scope": "scss",
+      "prefix": "scss-func",
+      "body": [
+        "@function $1($2) {",
+        "  @return $3;",
+        "}"
+      ],
+      "description": "SCSS Custom Function"
+    },
+    "scss-import": {
+      "scope": "scss",
+      "prefix": "scss-import",
+      "body": [
+        "@import \"$1\";"
+      ],
+      "description": "SCSS Import File"
+    },
+    "scss-dark-light": {
+      "scope": "scss",
+      "prefix": "scss-dark-light",
+      "body": [
+        "body {",
+        "  background-color: $light-bg;",
+        "  color: $dark-color;",
+        "",
+        "  @media (prefers-color-scheme: dark) {",
+        "    background-color: $dark-bg;",
+        "    color: $light-color;",
+        "  }",
+        "}"
+      ],
+      "description": "SCSS prefers-color-scheme Dark Mode"
+    }
+  }
+}

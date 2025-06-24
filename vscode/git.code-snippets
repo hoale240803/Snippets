@@ -1,0 +1,87 @@
+{
+  "git-config": {
+    "prefix": "git-config",
+    "body": [
+      "git config --global user.name \"Your Name\""
+    ],
+    "description": "Set your Git username globally"
+  },
+  "git-config-email": {
+    "prefix": "git-config-email",
+    "body": [
+      "git config --global user.email \"you@example.com\""
+    ],
+    "description": "Set your email globally"
+  },
+  "git-reset-hard": {
+    "prefix": "git-reset",
+    "body": "git reset --hard HEAD~$1",
+    "description": "Reset branch to nth commit (destructive)"
+  },
+  "git-reset-soft": {
+    "prefix": "git-reset-soft",
+    "body": "git reset --soft HEAD~$1",
+    "description": "Undo commit, keep changes staged"
+  },
+  "git-reset-mixed": {
+    "prefix": "git-reset-mixed",
+    "body": "git reset --mixed HEAD~$1",
+    "description": "Undo commit, keep changes unstaged"
+  },
+  "git-log-graph": {
+    "prefix": "git-log-graph",
+    "body": "git log --oneline --graph --all",
+    "description": "Visualize Git history"
+  },
+  "git-commit-amend": {
+    "prefix": "git-amend",
+    "body": "git commit --amend -m \"$1\"",
+    "description": "Amend last commit with new message"
+  },
+  "git-rebase-last-n": {
+    "prefix": "git-rebase",
+    "body": "git rebase -i HEAD~$1",
+    "description": "Interactive rebase last n commits"
+  },
+  "git-push-force": {
+    "prefix": "git-push-force",
+    "body": "git push -f",
+    "description": "Force push (destructive)"
+  },
+  "git-stash": {
+    "prefix": "git-stash",
+    "body": "git stash save \"$1\"",
+    "description": "Stash current changes with message"
+  },
+  "git-cherry-pick": {
+    "prefix": "git-cherry-pick",
+    "body": "git cherry-pick $1",
+    "description": "Apply a single commit from another branch"
+  },
+  "git-revert": {
+    "prefix": "git-revert",
+    "body": "git revert $1",
+    "description": "Undo a commit safely (creates a new one)"
+  },
+  "git-merge": {
+    "prefix": "git-merge",
+    "body": [
+      "git merge ${1:branch}"
+    ],
+    "description": "Merge branch into current"
+  },
+  "git-rebase": {
+    "prefix": "git-rebase",
+    "body": [
+      "git rebase ${1:branch}"
+    ],
+    "description": "Reapply commits on new base"
+  },
+  "git-restore-deleted-branch": {
+    "prefix": "git-restore-branch",
+    "body": [
+      "git checkout -b ${1:branch-name} origin/${1:branch-name}"
+    ],
+    "description": "Restore a deleted local branch from remote https://stackoverflow.com/questions/3640764/can-i-recover-a-branch-after-its-deletion-in-git"
+  }
+}

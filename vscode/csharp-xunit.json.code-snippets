@@ -1,0 +1,43 @@
+{
+	"XUnit Simple Test": {
+		"prefix": "xunit-simple",
+		"body": "[Fact] public void Test() { $0 }",
+		"description": "Minimal XUnit test"
+	},
+	"XUnit Test with Expected Exception": {
+		"prefix": "xunit-exception",
+		"body": [
+			"[Fact]",
+			"public void ${1:TestName}_Throws${2:ExceptionType}()",
+			"{",
+			"    // Arrange",
+			"    $0",
+			"    // Act & Assert",
+			"    Assert.Throws<${2:ExceptionType}>(() => {",
+			"        // Code that throws exception",
+			"    });",
+			"}"
+		],
+		"description": "Create an xUnit test that expects a specific exception"
+	},
+	"Test with Mock (Moq)": {
+		"prefix": "xmock",
+		"body": [
+			"[Fact]",
+			"public void ${1:TestName}()",
+			"{",
+			"    // Arrange",
+			"    var mock = new Mock<${2:IService}>();",
+			"    mock.Setup(x => x.${3:Method}(${4:parameters})).Returns(${5:returnValue});",
+			"    var sut = new ${6:ClassUnderTest}(mock.Object);",
+			"    $0",
+			"    // Act",
+			"    var result = sut.${7:MethodToTest}(${8:arguments});",
+			"    // Assert",
+			"    Assert.NotNull(result);",
+			"    mock.Verify(x => x.${3:Method}(${4:parameters}), Times.Once());",
+			"}"
+		],
+		"description": "Create an xUnit test with Moq for mocking dependencies"
+	}
+}

@@ -1,0 +1,343 @@
+{
+	"scope": "css, csss",
+	"css-reset": {
+		"prefix": "css-reset",
+		"body": [
+			"* {",
+			"  margin: 0;",
+			"  padding: 0;",
+			"  box-sizing: border-box;",
+			"}"
+		],
+		"description": "CSS Reset Basic"
+	},
+	"css-flex-center": {
+		"prefix": "css-flex-center",
+		"body": [
+			"display: flex;",
+			"justify-content: center;",
+			"align-items: center;"
+		],
+		"description": "Center with Flexbox"
+	},
+	"css-flex-column": {
+		"prefix": "css-flex-column",
+		"body": [
+			"display: flex;",
+			"flex-direction: column;"
+		],
+		"description": "Flexbox Column Layout"
+	},
+	"css-grid-2col": {
+		"prefix": "css-grid-2col",
+		"body": [
+			"display: grid;",
+			"grid-template-columns: repeat(2, 1fr);",
+			"gap: 1rem;"
+		],
+		"description": "Grid 2 Columns"
+	},
+	"css-grid-3col": {
+		"prefix": "css-grid-3col",
+		"body": [
+			"display: grid;",
+			"grid-template-columns: repeat(3, 1fr);",
+			"gap: 1rem;"
+		],
+		"description": "Grid 3 Columns"
+	},
+	"css-center-absolute": {
+		"prefix": "css-center-absolute",
+		"body": [
+			"position: absolute;",
+			"top: 50%;",
+			"left: 50%;",
+			"transform: translate(-50%, -50%);"
+		],
+		"description": "Center Absolute Position"
+	},
+	"css-position-sticky": {
+		"prefix": "css-position-sticky",
+		"body": [
+			"position: sticky;",
+			"top: 0;"
+		],
+		"description": "Sticky Top Element"
+	},
+	"css-fixed-header": {
+		"prefix": "css-fixed-header",
+		"body": [
+			"position: fixed;",
+			"top: 0;",
+			"left: 0;",
+			"width: 100%;",
+			"z-index: 1000;"
+		],
+		"description": "Fixed Header"
+	},
+	"css-background-image": {
+		"prefix": "css-background-image",
+		"body": [
+			"background-image: url('$1');",
+			"background-size: cover;",
+			"background-position: center;",
+			"background-repeat: no-repeat;"
+		],
+		"description": "Background Image Cover"
+	},
+	"css-background-overlay": {
+		"prefix": "css-background-overlay",
+		"body": [
+			"position: relative;",
+			"::after {",
+			"  content: '';",
+			"  position: absolute;",
+			"  top: 0; left: 0; right: 0; bottom: 0;",
+			"  background: rgba(0, 0, 0, 0.5);",
+			"}"
+		],
+		"description": "Background Overlay"
+	},
+	"css-transition-basic": {
+		"prefix": "css-transition-basic",
+		"body": [
+			"transition: all 0.3s ease;"
+		],
+		"description": "Basic Transition"
+	},
+	"css-hover-scale": {
+		"prefix": "css-hover-scale",
+		"body": [
+			"transition: transform 0.3s ease;",
+			":hover {",
+			"  transform: scale(1.05);",
+			"}"
+		],
+		"description": "Hover Scale Effect"
+	},
+	"css-hover-opacity": {
+		"prefix": "css-hover-opacity",
+		"body": [
+			"transition: opacity 0.3s;",
+			":hover {",
+			"  opacity: 0.8;",
+			"}"
+		],
+		"description": "Hover Opacity Effect"
+	},
+	"css-button-basic": {
+		"prefix": "css-button-basic",
+		"body": [
+			"padding: 0.5rem 1rem;",
+			"border: none;",
+			"background-color: $1;",
+			"color: #fff;",
+			"border-radius: 4px;",
+			"cursor: pointer;"
+		],
+		"description": "Basic Button Style"
+	},
+	"css-radius-rounded": {
+		"prefix": "css-radius-rounded",
+		"body": [
+			"border-radius: 9999px;"
+		],
+		"description": "Fully Rounded (Pill Shape)"
+	},
+	"css-text-ellipsis": {
+		"prefix": "css-text-ellipsis",
+		"body": [
+			"white-space: nowrap;",
+			"overflow: hidden;",
+			"text-overflow: ellipsis;"
+		],
+		"description": "Single Line Ellipsis"
+	},
+	"css-box-shadow-basic": {
+		"prefix": "css-box-shadow-basic",
+		"body": [
+			"box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"
+		],
+		"description": "Basic Box Shadow"
+	},
+	"css-text-center": {
+		"prefix": "css-text-center",
+		"body": [
+			"text-align: center;"
+		],
+		"description": "Center Text"
+	},
+	"css-width-height-100": {
+		"prefix": "css-width-height-100",
+		"body": [
+			"width: 100%;",
+			"height: 100%;"
+		],
+		"description": "Full Width Height"
+	},
+	"css-max-width-center": {
+		"prefix": "css-max-width-center",
+		"body": [
+			"max-width: 1200px;",
+			"margin: 0 auto;",
+			"padding: 0 1rem;"
+		],
+		"description": "Center Large Content"
+	},
+	"css-overflow-scroll": {
+		"prefix": "css-overflow-scroll",
+		"body": [
+			"overflow: auto;"
+		],
+		"description": "Enable Scroll on Overflow"
+	},
+	"css-scroll-smooth": {
+		"prefix": "css-scroll-smooth",
+		"body": [
+			"scroll-behavior: smooth;"
+		],
+		"description": "Smooth Scroll Behavior"
+	},
+	"css-hidden": {
+		"prefix": "css-hidden",
+		"body": [
+			"display: none;"
+		],
+		"description": "Hide Element"
+	},
+	"css-visible": {
+		"prefix": "css-visible",
+		"body": [
+			"display: block;"
+		],
+		"description": "Make Element Visible"
+	},
+	"css-cursor-pointer": {
+		"prefix": "css-cursor-pointer",
+		"body": [
+			"cursor: pointer;"
+		],
+		"description": "Cursor Pointer"
+	},
+	"css-line-height": {
+		"prefix": "css-line-height",
+		"body": [
+			"line-height: 1.5;"
+		],
+		"description": "Default Line Height"
+	},
+	"css-letter-spacing": {
+		"prefix": "css-letter-spacing",
+		"body": [
+			"letter-spacing: 0.05em;"
+		],
+		"description": "Letter Spacing"
+	},
+	"css-border-none": {
+		"prefix": "css-border-none",
+		"body": [
+			"border: none;"
+		],
+		"description": "Remove Border"
+	},
+	"css-border-basic": {
+		"prefix": "css-border-basic",
+		"body": [
+			"border: 1px solid #ccc;"
+		],
+		"description": "Light Border"
+	},
+	"css-display-inlineblock": {
+		"prefix": "css-display-inlineblock",
+		"body": [
+			"display: inline-block;"
+		],
+		"description": "Inline Block Display"
+	},
+	"css-display-grid": {
+		"prefix": "css-display-grid",
+		"body": [
+			"display: grid;"
+		],
+		"description": "Grid Display"
+	},
+	"css-display-flex": {
+		"prefix": "css-display-flex",
+		"body": [
+			"display: flex;"
+		],
+		"description": "Flexbox Display"
+	},
+	"css-vh-viewport": {
+		"prefix": "css-vh-viewport",
+		"body": [
+			"height: 100vh;"
+		],
+		"description": "Full Viewport Height"
+	},
+	"css-vw-viewport": {
+		"prefix": "css-vw-viewport",
+		"body": [
+			"width: 100vw;"
+		],
+		"description": "Full Viewport Width"
+	},
+	"css-gap-grid": {
+		"prefix": "css-gap-grid",
+		"body": [
+			"gap: 1rem;"
+		],
+		"description": "Gap Between Items (Grid/Flex)"
+	},
+	"css-align-self-center": {
+		"prefix": "css-align-self-center",
+		"body": [
+			"align-self: center;"
+		],
+		"description": "Align Self Center (Flex/Grid)"
+	},
+	"css-justify-self-center": {
+		"prefix": "css-justify-self-center",
+		"body": [
+			"justify-self: center;"
+		],
+		"description": "Justify Self Center (Grid)"
+	},
+	"css-gradient-bg": {
+		"prefix": "css-gradient-bg",
+		"body": [
+			"background: linear-gradient(to right, #4facfe, #00f2fe);"
+		],
+		"description": "Linear Gradient Background"
+	},
+	"css-rounded-sm": {
+		"prefix": "css-rounded-sm",
+		"body": [
+			"border-radius: 4px;"
+		],
+		"description": "Small Border Radius"
+	},
+	"css-rounded-md": {
+		"prefix": "css-rounded-md",
+		"body": [
+			"border-radius: 8px;"
+		],
+		"description": "Medium Border Radius"
+	},
+	"css-rounded-lg": {
+		"prefix": "css-rounded-lg",
+		"body": [
+			"border-radius: 16px;"
+		],
+		"description": "Large Border Radius"
+	},
+	"css-fixed-bottom": {
+		"prefix": "css-fixed-bottom",
+		"body": [
+			"position: fixed;",
+			"bottom: 0;",
+			"width: 100%;"
+		],
+		"description": "Fixed Bottom Bar"
+	}
+}

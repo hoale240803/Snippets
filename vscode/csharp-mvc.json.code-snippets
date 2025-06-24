@@ -1,0 +1,79 @@
+{
+	"MVC Controller": {
+		"prefix": "cs-mvc-controller",
+		"body": [
+			"using Microsoft.AspNetCore.Mvc;",
+			"",
+			"namespace ${TM_DIRECTORY/.*[\\\\/]([^\\\\/]+)[\\\\/]([^\\\\/]+)$/$1.$2/i};",
+			"public class ${1:ControllerName}Controller : Controller",
+			"{",
+			"    public IActionResult ${2:Index}()",
+			"    {",
+			"        return View();",
+			"    }",
+			"}"
+		],
+		"description": "Create an ASP.NET Core MVC controller with an Index action"
+	},
+	"MVC Action Method": {
+		"prefix": "cs-mvc-action",
+		"body": [
+			"public IActionResult ${1:ActionName}(${2:parameters})",
+			"{",
+			"    $0",
+			"    return View();",
+			"}"
+		],
+		"description": "Create an ASP.NET Core MVC action method"
+	},
+	"MVC Model Class": {
+		"prefix": "cs-mvc-model",
+		"body": [
+			"namespace ${TM_DIRECTORY/.*[\\\\/]([^\\\\/]+)[\\\\/]([^\\\\/]+)$/$1.$2/i};",
+			"public class ${1:ModelName}",
+			"{",
+			"    public ${2:int} ${3:Id} { get; set; }",
+			"    $0",
+			"}"
+		],
+		"description": "Create an ASP.NET Core MVC model class"
+	},
+	"Razor View": {
+		"prefix": "cs-mvc-view",
+		"body": [
+			"@model ${TM_DIRECTORY/.*[\\\\/]([^\\\\/]+)[\\\\/]([^\\\\/]+)$/$1.$2/i}.${1:ModelName}",
+			"",
+			"@{",
+			"    ViewData[\"Title\"] = \"${2:PageTitle}\";",
+			"}",
+			"",
+			"<h1>${2:PageTitle}</h1>",
+			"$0"
+		],
+		"description": "Create a basic ASP.NET Core MVC Razor view"
+	},
+	"MVC Controller with Dependency Injection": {
+		"prefix": "cs-mvc-di",
+		"body": [
+			"using Microsoft.AspNetCore.Mvc;",
+			"",
+			"namespace ${TM_DIRECTORY/.*[\\\\/]([^\\\\/]+)[\\\\/]([^\\\\/]+)$/$1.$2/i};",
+			"public class ${1:ControllerName}Controller : Controller",
+			"{",
+			"    private readonly ${2:IService} _${3:service};",
+			"",
+			"    public ${1:ControllerName}Controller(${2:IService} ${3:service})",
+			"    {",
+			"        _${3:service} = ${3:service};",
+			"    }",
+			"",
+			"    public IActionResult ${4:Index}()",
+			"    {",
+			"        $0",
+			"        return View();",
+			"    }",
+			"}"
+		],
+		"description": "Create an ASP.NET Core MVC controller with dependency injection"
+	}
+}

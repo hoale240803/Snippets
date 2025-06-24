@@ -1,0 +1,52 @@
+{
+  "GAS: Get Active Spreadsheet": {
+    "prefix": "gsSS",
+    "body": ["const ss = SpreadsheetApp.getActiveSpreadsheet();"],
+    "description": "Get active spreadsheet"
+  },
+  "GAS: Get Sheet by Name": {
+    "prefix": "gsSheet",
+    "body": ["const $1Sheet = ss.getSheetByName(\"$2\");"],
+    "description": "Get a sheet by name"
+  },
+  "GAS: Get Range and Value": {
+    "prefix": "gsGetRange",
+    "body": ["const $1 = $2.getRange(\"$3\").getValue();"],
+    "description": "Get cell value from range"
+  },
+  "GAS: Set Range Value": {
+    "prefix": "gsSetRange",
+    "body": ["$1.getRange(\"$2\").setValue($3);"],
+    "description": "Set cell value in range"
+  },
+  "GAS: Append Row": {
+    "prefix": "gsAppendRow",
+    "body": ["$1.appendRow([$2]);"],
+    "description": "Append a row to sheet"
+  },
+  "GAS: Format Date": {
+    "prefix": "gsFormatDate",
+    "body": ["Utilities.formatDate($1, Session.getScriptTimeZone(), \"yyyy-MM-dd HH:mm\")"],
+    "description": "Format date to string"
+  },
+  "GAS: Alert Dialog": {
+    "prefix": "gsAlert",
+    "body": ["SpreadsheetApp.getUi().alert(\"$1\");"],
+    "description": "Show alert dialog"
+  },
+  "GAS: Clear Sheet": {
+    "prefix": "gsClear",
+    "body": ["$1.clearContents();"],
+    "description": "Clear all data in sheet"
+  },
+  "GAS: Sort Array by Field": {
+    "prefix": "gsSort",
+    "body": [
+      "$1.sort((a, b) => {",
+      "  const priorityMap = { \"High\": 1, \"Normal\": 2, \"Low\": 3 };",
+      "  return (priorityMap[a[$2]] || 99) - (priorityMap[b[$2]] || 99);",
+      "});"
+    ],
+    "description": "Sort array by custom field (e.g., priority)"
+  }
+}

@@ -1,0 +1,234 @@
+{
+	"js-log": {
+		"prefix": "js-log",
+		"body": [
+			"console.log($1);"
+		],
+		"description": "JavaScript Console Log"
+	},
+	"js-var": {
+		"prefix": "js-var",
+		"body": [
+			"let $1 = $2;"
+		],
+		"description": "JavaScript Variable Declaration"
+	},
+	"js-const": {
+		"prefix": "js-const",
+		"body": [
+			"const $1 = $2;"
+		],
+		"description": "JavaScript Constant"
+	},
+	"js-if": {
+		"prefix": "js-if",
+		"body": [
+			"if ($1) {",
+			"  $2",
+			"}"
+		],
+		"description": "JavaScript If Condition"
+	},
+	"js-else": {
+		"prefix": "js-else",
+		"body": [
+			"else {",
+			"  $1",
+			"}"
+		],
+		"description": "JavaScript Else Condition"
+	},
+	"js-for": {
+		"prefix": "js-for",
+		"body": [
+			"for (let i = 0; i < $1; i++) {",
+			"  $2",
+			"}"
+		],
+		"description": "JavaScript For Loop"
+	},
+	"js-while": {
+		"prefix": "js-while",
+		"body": [
+			"while ($1) {",
+			"  $2",
+			"}"
+		],
+		"description": "JavaScript While Loop"
+	},
+	"js-func": {
+		"prefix": "js-func",
+		"body": [
+			"function $1() {",
+			"  $2",
+			"}"
+		],
+		"description": "JavaScript Function"
+	},
+	"js-return": {
+		"prefix": "js-return",
+		"body": [
+			"return $1;"
+		],
+		"description": "JavaScript Return Statement"
+	},
+	"js-array": {
+		"prefix": "js-array",
+		"body": [
+			"let arr = [$1];"
+		],
+		"description": "JavaScript Array Declaration"
+	},
+	"js-class": {
+		"prefix": "js-class",
+		"body": [
+			"class $1 {",
+			"  constructor() {",
+			"    $2",
+			"  }",
+			"}"
+		],
+		"description": "JavaScript Class Declaration"
+	},
+	"js-new": {
+		"prefix": "js-new",
+		"body": [
+			"let $1 = new $2();"
+		],
+		"description": "JavaScript New Object"
+	},
+	"js-cmt": {
+		"prefix": "js-cmt",
+		"body": [
+			"// $1"
+		],
+		"description": "JavaScript Single-line Comment"
+	},
+	"js-mcmt": {
+		"prefix": "js-mcmt",
+		"body": [
+			"/*",
+			"  $1",
+			"*/"
+		],
+		"description": "JavaScript Multi-line Comment"
+	},
+	"js-try": {
+		"prefix": "js-try",
+		"body": [
+			"try {",
+			"  $1",
+			"} catch (e) {",
+			"  $2",
+			"}"
+		],
+		"description": "JavaScript Try-Catch"
+	},
+	"js-switch": {
+		"prefix": "js-switch",
+		"body": [
+			"switch ($1) {",
+			"  case $2:",
+			"    $3",
+			"    break;",
+			"}"
+		],
+		"description": "JavaScript Switch Case"
+	},
+	"js-str": {
+		"prefix": "js-str",
+		"body": [
+			"let $1 = \"$2\";"
+		],
+		"description": "JavaScript String Declaration"
+	},
+	"js-strint": {
+		"prefix": "js-strint",
+		"body": [
+			"`Hello ${$1}`"
+		],
+		"description": "JavaScript Template String Interpolation"
+	},
+	"js-null": {
+		"prefix": "js-null",
+		"body": [
+			"if ($1 !== null) {",
+			"  $2",
+			"}"
+		],
+		"description": "JavaScript Null Check"
+	},
+	"js-len": {
+		"prefix": "js-len",
+		"body": [
+			"$1.length"
+		],
+		"description": "JavaScript Array Length"
+	},
+	"js-bool": {
+		"prefix": "js-bool",
+		"body": [
+			"let $1 = $2;"
+		],
+		"description": "JavaScript Boolean Declaration"
+	},
+	"js-input": {
+		"prefix": "js-input",
+		"body": [
+			"prompt('$1');"
+		],
+		"description": "JavaScript Prompt Input"
+	},
+	"js-break": {
+		"prefix": "js-break",
+		"body": [
+			"break;"
+		],
+		"description": "JavaScript Break"
+	},
+	"js-continue": {
+		"prefix": "js-continue",
+		"body": [
+			"continue;"
+		],
+		"description": "JavaScript Continue"
+	},
+	"js-import": {
+		"prefix": "js-import",
+		"body": [
+			"import {$1} from '$2';"
+		],
+		"description": "JavaScript ES6 Import"
+	},
+	"js-filerd": {
+		"prefix": "js-filerd",
+		"body": [
+			"const fs = require('fs');",
+			"const data = fs.readFileSync('$1', 'utf8');"
+		],
+		"description": "JavaScript File Read Sync"
+	},
+	"js-sleep": {
+		"prefix": "js-sleep",
+		"body": [
+			"setTimeout(() => {",
+			"  $1",
+			"}, $2);"
+		],
+		"description": "JavaScript Sleep (setTimeout)"
+	},
+	"js-random": {
+		"prefix": "js-random",
+		"body": [
+			"Math.random();"
+		],
+		"description": "JavaScript Random Number"
+	},
+	"js-upper": {
+		"prefix": "js-upper",
+		"body": [
+			"$1.toUpperCase();"
+		],
+		"description": "JavaScript To UpperCase"
+	}
+}

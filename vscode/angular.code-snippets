@@ -1,0 +1,264 @@
+{
+  "ng-component": {
+    "scope": "javascript,html",
+    "prefix": "ng-component",
+    "body": [
+      "import { Component } from '@angular/core';",
+      "",
+      "@Component({",
+      "  selector: 'app-$1',",
+      "  templateUrl: './$1.component.html',",
+      "  styleUrls: ['./$1.component.scss']",
+      "})",
+      "export class $1Component {",
+      "  constructor() { }",
+      "}"
+    ],
+    "description": "Angular Component"
+  },
+  "ng-module": {
+    "prefix": "ng-module",
+    "body": [
+      "import { NgModule } from '@angular/core';",
+      "import { BrowserModule } from '@angular/platform-browser';",
+      "",
+      "import { AppComponent } from './app.component';",
+      "",
+      "@NgModule({",
+      "  declarations: [$1],",
+      "  imports: [BrowserModule],",
+      "  providers: [],",
+      "  bootstrap: [AppComponent]",
+      "})",
+      "export class AppModule { }"
+    ],
+    "description": "Angular NgModule"
+  },
+  "ng-service": {
+    "prefix": "ng-service",
+    "body": [
+      "import { Injectable } from '@angular/core';",
+      "",
+      "@Injectable({",
+      "  providedIn: 'root'",
+      "})",
+      "export class $1Service {",
+      "  constructor() { }",
+      "}"
+    ],
+    "description": "Angular Service"
+  },
+  "ng-directive": {
+    "scope": "typescript",
+    "prefix": "ng-directive",
+    "body": [
+      "import { Directive } from '@angular/core';",
+      "",
+      "@Directive({",
+      "  selector: '[$1]'",
+      "})",
+      "export class $1Directive {",
+      "  constructor() { }",
+      "}"
+    ],
+    "description": "Angular Directive"
+  },
+  "ng-pipe": {
+    "prefix": "ng-pipe",
+    "body": [
+      "import { Pipe, PipeTransform } from '@angular/core';",
+      "",
+      "@Pipe({",
+      "  name: '$1'",
+      "})",
+      "export class $1Pipe implements PipeTransform {",
+      "  transform(value: any, ...args: any[]): any {",
+      "    return $2;",
+      "  }",
+      "}"
+    ],
+    "description": "Angular Pipe"
+  },
+  "ng-interface": {
+    "prefix": "ng-interface",
+    "body": [
+      "export interface $1 {",
+      "  $2: $3;",
+      "}"
+    ],
+    "description": "TypeScript Interface"
+  },
+  "ng-httpclient-get": {
+    "prefix": "ng-httpclient-get",
+    "body": [
+      "constructor(private http: HttpClient) {}",
+      "",
+      "getData() {",
+      "  return this.http.get<$1>('https://api.example.com/$2');",
+      "}"
+    ],
+    "description": "HttpClient GET Request"
+  },
+  "ng-httpclient-post": {
+    "prefix": "ng-httpclient-post",
+    "body": [
+      "constructor(private http: HttpClient) {}",
+      "",
+      "postData(data: any) {",
+      "  return this.http.post('https://api.example.com/$1', data);",
+      "}"
+    ],
+    "description": "HttpClient POST Request"
+  },
+  "ng-router-link": {
+    "prefix": "ng-router-link",
+    "body": [
+      "<a [routerLink]=\"['/$1']\">$2</a>"
+    ],
+    "description": "RouterLink Binding"
+  },
+  "ng-router-navigate": {
+    "prefix": "ng-router-navigate",
+    "body": [
+      "constructor(private router: Router) {}",
+      "",
+      "navigateTo() {",
+      "  this.router.navigate(['/$1']);",
+      "}"
+    ],
+    "description": "Router Navigation"
+  },
+  "ng-router-outlet": {
+    "prefix": "ng-router-outlet",
+    "body": [
+      "<router-outlet></router-outlet>"
+    ],
+    "description": "Router Outlet"
+  },
+  "ng-ngif": {
+    "prefix": "ng-ngif",
+    "body": [
+      "<div *ngIf=\"$1\">$2</div>"
+    ],
+    "description": "*ngIf Conditional"
+  },
+  "ng-ngfor": {
+    "prefix": "ng-ngfor",
+    "body": [
+      "<div *ngFor=\"let item of $1\">",
+      "  {{item.$2}}",
+      "</div>"
+    ],
+    "description": "*ngFor Loop"
+  },
+  "ng-ngclass": {
+    "prefix": "ng-ngclass",
+    "body": [
+      "<div [ngClass]=\"{ 'class-name': condition }\">$1</div>"
+    ],
+    "description": "ngClass Binding"
+  },
+  "ng-ngstyle": {
+    "prefix": "ng-ngstyle",
+    "body": [
+      "<div [ngStyle]=\"{ 'color': colorVar }\">$1</div>"
+    ],
+    "description": "ngStyle Binding"
+  },
+  "ng-two-way-binding": {
+    "prefix": "ng-model",
+    "body": [
+      "<input [(ngModel)]=\"$1\" />"
+    ],
+    "description": "Two-way Binding (ngModel)"
+  },
+  "ng-input-decorator": {
+    "prefix": "ng-input",
+    "body": [
+      "@Input() $1: $2;"
+    ],
+    "description": "@Input Decorator"
+  },
+  "ng-output-decorator": {
+    "prefix": "ng-output",
+    "body": [
+      "@Output() $1 = new EventEmitter<$2>();"
+    ],
+    "description": "@Output Decorator"
+  },
+  "ng-emit-output": {
+    "prefix": "ng-emit",
+    "body": [
+      "this.$1.emit($2);"
+    ],
+    "description": "Emit Output Event"
+  },
+  "ng-form-submit": {
+    "prefix": "ng-form-submit",
+    "body": [
+      "<form (ngSubmit)=\"onSubmit()\">",
+      "  $1",
+      "</form>"
+    ],
+    "description": "Form Submit Event"
+  },
+  "ng-formgroup": {
+    "prefix": "ng-formgroup",
+    "body": [
+      "this.form = this.fb.group({",
+      "  $1: ['', Validators.required]",
+      "});"
+    ],
+    "description": "Reactive FormGroup"
+  },
+  "ng-validators": {
+    "prefix": "ng-validators",
+    "body": [
+      "Validators.required,",
+      "Validators.minLength($1),",
+      "Validators.maxLength($2)"
+    ],
+    "description": "Validators Setup"
+  },
+  "ng-lifecycle-oninit": {
+    "prefix": "ng-oninit",
+    "body": [
+      "ngOnInit(): void {",
+      "  $1",
+      "}"
+    ],
+    "description": "ngOnInit Lifecycle"
+  },
+  "ng-lifecycle-ondestroy": {
+    "prefix": "ng-ondestroy",
+    "body": [
+      "ngOnDestroy(): void {",
+      "  $1",
+      "}"
+    ],
+    "description": "ngOnDestroy Lifecycle"
+  },
+  "ng-lifecycle-doCheck": {
+    "prefix": "ng-docheck",
+    "body": [
+      "ngDoCheck(): void {",
+      "  $1",
+      "}"
+    ],
+    "description": "ngDoCheck Lifecycle"
+  },
+  "ng-interpolation": {
+    "prefix": "ng-interpolation",
+    "body": [
+      "{{ $1 }}"
+    ],
+    "description": "Interpolation"
+  },
+  "ng-event-binding": {
+    "prefix": "ng-event",
+    "body": [
+      "<button (click)=\"$1\">$2</button>"
+    ],
+    "description": "Event Binding (click)"
+  }
+}

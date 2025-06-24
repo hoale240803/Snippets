@@ -1,0 +1,334 @@
+{
+	"html-html": {
+		"scope": "html",
+		"prefix": "html-html",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"en\">",
+			"<head>",
+			"  $1",
+			"</head>",
+			"<body>",
+			"  $2",
+			"</body>",
+			"</html>"
+		],
+		"description": "HTML root document structure"
+	},
+	"html-head": {
+		"prefix": "html-head",
+		"body": [
+			"<head>",
+			"  $1",
+			"</head>"
+		],
+		"description": "HTML Head tag"
+	},
+	"html-title": {
+		"prefix": "html-title",
+		"body": [
+			"<title>$1</title>"
+		],
+		"description": "HTML Title"
+	},
+	"html-meta": {
+		"prefix": "html-meta",
+		"body": [
+			"<meta charset=\"UTF-8\">"
+		],
+		"description": "HTML Meta Charset"
+	},
+	"html-link": {
+		"prefix": "html-link",
+		"body": [
+			"<link rel=\"stylesheet\" href=\"$1\">"
+		],
+		"description": "HTML Link Stylesheet"
+	},
+	"html-script": {
+		"prefix": "html-script",
+		"body": [
+			"<script src=\"$1\"></script>"
+		],
+		"description": "HTML Script Link"
+	},
+	"html-style": {
+		"prefix": "html-style",
+		"body": [
+			"<style>",
+			"  $1",
+			"</style>"
+		],
+		"description": "HTML Style Tag"
+	},
+	"html-body": {
+		"prefix": "html-body",
+		"body": [
+			"<body>",
+			"  $1",
+			"</body>"
+		],
+		"description": "HTML Body Tag"
+	},
+	"html-header": {
+		"prefix": "html-header",
+		"body": [
+			"<header>",
+			"  $1",
+			"</header>"
+		],
+		"description": "HTML Header Section"
+	},
+	"html-footer": {
+		"prefix": "html-footer",
+		"body": [
+			"<footer>",
+			"  $1",
+			"</footer>"
+		],
+		"description": "HTML Footer Section"
+	},
+	"html-nav": {
+		"prefix": "html-nav",
+		"body": [
+			"<nav>",
+			"  $1",
+			"</nav>"
+		],
+		"description": "HTML Nav Menu"
+	},
+	"html-section": {
+		"prefix": "html-section",
+		"body": [
+			"<section>",
+			"  $1",
+			"</section>"
+		],
+		"description": "HTML Section Block"
+	},
+	"html-article": {
+		"prefix": "html-article",
+		"body": [
+			"<article>",
+			"  $1",
+			"</article>"
+		],
+		"description": "HTML Article Block"
+	},
+	"html-aside": {
+		"prefix": "html-aside",
+		"body": [
+			"<aside>",
+			"  $1",
+			"</aside>"
+		],
+		"description": "HTML Aside Sidebar"
+	},
+	"html-main": {
+		"prefix": "html-main",
+		"body": [
+			"<main>",
+			"  $1",
+			"</main>"
+		],
+		"description": "HTML Main Content"
+	},
+	"html-div": {
+		"prefix": "html-div",
+		"body": [
+			"<div>",
+			"  $1",
+			"</div>"
+		],
+		"description": "HTML Div Block"
+	},
+	"html-p": {
+		"prefix": "html-p",
+		"body": [
+			"<p>$1</p>"
+		],
+		"description": "HTML Paragraph"
+	},
+	"html-span": {
+		"prefix": "html-span",
+		"body": [
+			"<span>$1</span>"
+		],
+		"description": "HTML Span Inline"
+	},
+	"html-h1": {
+		"prefix": "html-h1",
+		"body": [
+			"<h1>$1</h1>"
+		],
+		"description": "HTML Heading 1"
+	},
+	"html-h2": {
+		"prefix": "html-h2",
+		"body": [
+			"<h2>$1</h2>"
+		],
+		"description": "HTML Heading 2"
+	},
+	"html-h3": {
+		"prefix": "html-h3",
+		"body": [
+			"<h3>$1</h3>"
+		],
+		"description": "HTML Heading 3"
+	},
+	"html-ul": {
+		"prefix": "html-ul",
+		"body": [
+			"<ul>",
+			"  <li>$1</li>",
+			"</ul>"
+		],
+		"description": "HTML Unordered List"
+	},
+	"html-ol": {
+		"prefix": "html-ol",
+		"body": [
+			"<ol>",
+			"  <li>$1</li>",
+			"</ol>"
+		],
+		"description": "HTML Ordered List"
+	},
+	"html-li": {
+		"prefix": "html-li",
+		"body": [
+			"<li>$1</li>"
+		],
+		"description": "HTML List Item"
+	},
+	"html-a": {
+		"prefix": "html-a",
+		"body": [
+			"<a href=\"$1\">$2</a>"
+		],
+		"description": "HTML Anchor Link"
+	},
+	"html-img": {
+		"prefix": "html-img",
+		"body": [
+			"<img src=\"$1\" alt=\"$2\">"
+		],
+		"description": "HTML Image"
+	},
+	"html-input": {
+		"prefix": "html-input",
+		"body": [
+			"<input type=\"$1\" name=\"$2\" value=\"$3\">"
+		],
+		"description": "HTML Input Field"
+	},
+	"html-button": {
+		"prefix": "html-button",
+		"body": [
+			"<button type=\"$1\">$2</button>"
+		],
+		"description": "HTML Button"
+	},
+	"html-form": {
+		"prefix": "html-form",
+		"body": [
+			"<form action=\"$1\" method=\"$2\">",
+			"  $3",
+			"</form>"
+		],
+		"description": "HTML Form"
+	},
+	"html-textarea": {
+		"prefix": "html-textarea",
+		"body": [
+			"<textarea name=\"$1\" rows=\"$2\" cols=\"$3\">$4</textarea>"
+		],
+		"description": "HTML Textarea Field"
+	},
+	"html-select": {
+		"prefix": "html-select",
+		"body": [
+			"<select name=\"$1\">",
+			"  <option value=\"$2\">$3</option>",
+			"</select>"
+		],
+		"description": "HTML Select Dropdown"
+	},
+	"html-option": {
+		"prefix": "html-option",
+		"body": [
+			"<option value=\"$1\">$2</option>"
+		],
+		"description": "HTML Option Item"
+	},
+	"html-label": {
+		"prefix": "html-label",
+		"body": [
+			"<label for=\"$1\">$2</label>"
+		],
+		"description": "HTML Label Tag"
+	},
+	"html-table": {
+		"prefix": "html-table",
+		"body": [
+			"<table>",
+			"  <thead>",
+			"    <tr>",
+			"      <th>$1</th>",
+			"    </tr>",
+			"  </thead>",
+			"  <tbody>",
+			"    <tr>",
+			"      <td>$2</td>",
+			"    </tr>",
+			"  </tbody>",
+			"</table>"
+		],
+		"description": "HTML Table Structure"
+	},
+	"html-tr": {
+		"prefix": "html-tr",
+		"body": [
+			"<tr>",
+			"  $1",
+			"</tr>"
+		],
+		"description": "HTML Table Row"
+	},
+	"html-td": {
+		"prefix": "html-td",
+		"body": [
+			"<td>$1</td>"
+		],
+		"description": "HTML Table Data Cell"
+	},
+	"html-th": {
+		"prefix": "html-th",
+		"body": [
+			"<th>$1</th>"
+		],
+		"description": "HTML Table Header Cell"
+	},
+	"html-iframe": {
+		"prefix": "html-iframe",
+		"body": [
+			"<iframe src=\"$1\" width=\"$2\" height=\"$3\"></iframe>"
+		],
+		"description": "HTML Iframe Embed"
+	},
+	"html-br": {
+		"prefix": "html-br",
+		"body": [
+			"<br>"
+		],
+		"description": "HTML Line Break"
+	},
+	"html-hr": {
+		"prefix": "html-hr",
+		"body": [
+			"<hr>"
+		],
+		"description": "HTML Horizontal Rule"
+	}
+}

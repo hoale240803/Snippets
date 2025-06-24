@@ -1,0 +1,468 @@
+{
+	"Class Declaration": {
+		"prefix": "cs-class",
+		"body": [
+			"public class ${TM_FILENAME_BASE}",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "Create a basic C# class with namespace"
+	},
+	"Async Method": {
+		"prefix": "cs-asyncm",
+		"body": [
+			"public async Task<${1:void}> ${2:MethodName}Async(${3:parameters})",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "Create an async method template"
+	},
+	"Property": {
+		"prefix": "cs-prop",
+		"body": [
+			"public ${1:type} ${2:PropertyName} { get; set; }"
+		],
+		"description": "Create an auto-implemented property"
+	},
+	"Property with Backing Field": {
+		"prefix": "cs-propfull",
+		"body": [
+			"private ${1:type} _${2:propertyName};",
+			"public ${1:type} ${2:PropName}",
+			"{",
+			"    get => _${2:propertyName};",
+			"    set => _${2:propertyName} = value;",
+			"}"
+		],
+		"description": "Create a property with a backing field"
+	},
+	"Constructor": {
+		"prefix": "cs-ctor",
+		"body": [
+			"public ${TM_FILENAME_BASE}(${1:parameters})",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "Create a constructor for the current class"
+	},
+	"Main Method": {
+		"prefix": "cs-main",
+		"body": [
+			"public static void Main(string[] args)",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "Create the Main entry point method"
+	},
+	"Record Declaration": {
+		"prefix": "cs-record",
+		"body": [
+			"public record ${1:RecordName}(${2:properties});"
+		],
+		"description": "Create a record type declaration"
+	},
+	"Static Class": {
+		"prefix": "cs-staticclass",
+		"body": [
+			"public static class ${1:ClassName}",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "Create a static class"
+	},
+	"Delegate Declaration": {
+		"prefix": "cs-delegate",
+		"body": [
+			"public delegate ${1:void} ${2:DelegateName}(${3:parameters});"
+		],
+		"description": "Create a delegate declaration"
+	},
+	"Event Declaration": {
+		"prefix": "cs-event",
+		"body": [
+			"public event EventHandler<${1:EventArgs}> ${2:EventName};"
+		],
+		"description": "Create an event declaration"
+	},
+	"LINQ Query": {
+		"prefix": "cs-linq",
+		"body": [
+			"var query = from ${1:item} in ${2:collection}",
+			"            where ${3:condition}",
+			"            select ${1:item};",
+			"$0"
+		],
+		"description": "Create a basic LINQ query"
+	},
+	"Dependency Injection": {
+		"prefix": "cs-di",
+		"body": [
+			"private readonly ${1:IService} _${2:service};",
+			"public ${TM_FILENAME_BASE}(${1:IService} ${2:service})",
+			"{",
+			"    _${2:service} = ${2:service};",
+			"}"
+		],
+		"description": "Create a dependency injection constructor"
+	},
+	"cs-log": {
+		"prefix": "cs-log",
+		"body": [
+			"Console.WriteLine($\"$1\");"
+		],
+		"description": "C# Console WriteLine"
+	},
+	"cs-var": {
+		"prefix": "cs-var",
+		"body": [
+			"var $1 = $2;"
+		],
+		"description": "C# Variable Declaration"
+	},
+	"cs-const": {
+		"prefix": "cs-const",
+		"body": [
+			"const $1Type $2 = $3;"
+		],
+		"description": "C# Constant"
+	},
+	"cs-if": {
+		"prefix": "cs-if",
+		"body": [
+			"if ($1)",
+			"{",
+			"    $2",
+			"}"
+		],
+		"description": "C# If Condition"
+	},
+	"cs-else": {
+		"prefix": "cs-else",
+		"body": [
+			"else",
+			"{",
+			"    $1",
+			"}"
+		],
+		"description": "C# Else Condition"
+	},
+	"cs-for": {
+		"prefix": "cs-for",
+		"body": [
+			"for (int i = 0; i < $1; i++)",
+			"{",
+			"    $2",
+			"}"
+		],
+		"description": "C# For Loop"
+	},
+	"cs-while": {
+		"prefix": "cs-while",
+		"body": [
+			"while ($1)",
+			"{",
+			"    $2",
+			"}"
+		],
+		"description": "C# While Loop"
+	},
+	"cs-return": {
+		"prefix": "cs-return",
+		"body": [
+			"return $1;"
+		],
+		"description": "C# Return Statement"
+	},
+	"cs-array": {
+		"prefix": "cs-array",
+		"body": [
+			"$1[] arr = {$2};"
+		],
+		"description": "C# Array Declaration"
+	},
+	"cs-class": {
+		"prefix": "cs-class",
+		"body": [
+			"class $1",
+			"{",
+			"    $2",
+			"}"
+		],
+		"description": "C# Class Declaration"
+	},
+	"cs-cmt": {
+		"prefix": "cs-cmt",
+		"body": [
+			"// $1"
+		],
+		"description": "C# Single-line Comment"
+	},
+	"cs-mcmt": {
+		"prefix": "cs-mcmt",
+		"body": [
+			"/*",
+			" $1",
+			"*/"
+		],
+		"description": "C# Multi-line Comment"
+	},
+	"cs-str": {
+		"prefix": "cs-str",
+		"body": [
+			"string $1 = \"$2\";"
+		],
+		"description": "C# String Declaration"
+	},
+	"cs-strint": {
+		"prefix": "cs-strint",
+		"body": [
+			"$\"Hello {$1}\""
+		],
+		"description": "C# String Interpolation"
+	},
+	"cs-null": {
+		"prefix": "cs-null",
+		"body": [
+			"if ($1 != null)",
+			"{",
+			"    $2",
+			"}"
+		],
+		"description": "C# Null Check"
+	},
+	"cs-len": {
+		"prefix": "cs-len",
+		"body": [
+			"$1.Length"
+		],
+		"description": "C# Length of Array/List"
+	},
+	"cs-bool": {
+		"prefix": "cs-bool",
+		"body": [
+			"bool $1 = $2;"
+		],
+		"description": "C# Boolean Declaration"
+	},
+	"cs-input": {
+		"prefix": "cs-input",
+		"body": [
+			"Console.ReadLine();"
+		],
+		"description": "C# Input Console"
+	},
+	"cs-break": {
+		"prefix": "cs-break",
+		"body": [
+			"break;"
+		],
+		"description": "C# Break"
+	},
+	"cs-continue": {
+		"prefix": "cs-continue",
+		"body": [
+			"continue;"
+		],
+		"description": "C# Continue"
+	},
+	"cs-using": {
+		"prefix": "cs-using",
+		"body": [
+			"using $1;"
+		],
+		"description": "C# Using Directive"
+	},
+	"cs-filerd": {
+		"prefix": "cs-filerd",
+		"body": [
+			"File.ReadAllText(\"$1\");"
+		],
+		"description": "C# File Read"
+	},
+	"cs-sleep": {
+		"prefix": "cs-sleep",
+		"body": [
+			"Thread.Sleep($1);"
+		],
+		"description": "C# Sleep"
+	},
+	"cs-random": {
+		"prefix": "cs-random",
+		"body": [
+			"new Random().Next();"
+		],
+		"description": "C# Random Number"
+	},
+	"cs-upper": {
+		"prefix": "cs-upper",
+		"body": [
+			"$1.ToUpper();"
+		],
+		"description": "C# String To Upper"
+	},
+	"cs-objinit": {
+		"prefix": "cs-objinit",
+		"body": [
+			"var ${1:objectName} = new ${2:ClassName} { ${3:Property} = ${4:value} };"
+		],
+		"description": "C# Object Initialization Syntax"
+	},
+	"cs-ternary": {
+		"prefix": "cs-ternary",
+		"body": [
+			"${1:result} = ${2:condition} ? ${3:trueValue} : ${4:falseValue};"
+		],
+		"description": "C# Conditional Ternary Operator"
+	},
+	"cs-taskwhenall": {
+		"prefix": "cs-taskwhenall",
+		"body": [
+			"var tasks = new[] { ${1:TaskMethod}(${2:arg1}), ${3:TaskMethod}(${4:arg2}) };",
+			"var results = await Task.WhenAll(tasks);"
+		],
+		"description": "C# Task.WhenAll Method"
+	},
+	"cs-strinter": {
+		"prefix": "cs-strinter",
+		"body": [
+			"string ${1:variable} = $\"${2:content} {${3:value}}\";"
+		],
+		"description": "C# String Interpolation"
+	},
+	"cs-nullcond": {
+		"prefix": "cs-nullcond",
+		"body": [
+			"${1:type}? ${2:result} = ${3:object}?.${4:property} ?? ${5:defaultValue};"
+		],
+		"description": "C# Null-Conditional Operator"
+	},
+	"cs-dictinit": {
+		"prefix": "cs-dictinit",
+		"body": [
+			"var ${1:dictName} = new Dictionary<${2:keyType}, ${3:valueType}>",
+			"{",
+			"\t[${4:key}] = ${5:value}",
+			"};"
+		],
+		"description": "C# Dictionary Initialization"
+	},
+	"cs-const-string": {
+		"prefix": "cs-const-string",
+		"body": [
+			"public const string ${1:ConstantName} = \"${2:value}\";"
+		],
+		"description": "Declare a string constant"
+	},
+	"cs-enum-generic": {
+		"prefix": "cs-enum",
+		"body": [
+			"public enum ${1:RoleType}",
+			"{",
+			"    ${2:Role1},",
+			"    ${3:Role2},",
+			"    ${4:Role3}",
+			"}"
+		],
+		"description": "Create a generic enum"
+	},
+	"cs-async-return": {
+		"prefix": "cs-async-return",
+		"body": [
+			"public async Task<${1:ReturnType}> ${2:MethodName}(${3})",
+			"{",
+			"    ${4:// your async logic here}",
+			"    return ${5:result};",
+			"}"
+		],
+		"description": "Async method with return type"
+	},
+	"cs-async-void": {
+		"prefix": "cs-async-void",
+		"body": [
+			"public async Task ${1:MethodName}(${2})",
+			"{",
+			"    ${3:// your async logic here}",
+			"}"
+		],
+		"description": "Async method without return value"
+	},
+	"cs-private-generic": {
+		"prefix": "cs-private-generic",
+		"body": [
+			"private readonly ${1:GenericType}<${2:TypeParam}> ${3:_fieldName};"
+		],
+		"description": "Declare a private readonly field with a generic type"
+	},
+	"cs-api-controller": {
+		"prefix": "cs-api-controller",
+		"body": [
+			"[ApiController]",
+			"[Route(\"api/[controller]\")]",
+			"public class ${1:ControllerName} : ControllerBase",
+			"{",
+			"    private readonly ${2:IService} ${3:_service};",
+			"",
+			"    public ${1:ControllerName}(${2:IService} ${4:service})",
+			"    {",
+			"        ${3:_service} = ${4:service};",
+			"    }",
+			"",
+			"    ${5:// Add actions here}",
+			"}"
+		],
+		"description": "API Controller with route and DI service"
+	},
+	"cs-attr-api": {
+		"prefix": "cs-attr-api",
+		"body": [
+			"[ApiController]"
+		],
+		"description": "API controller attribute"
+	},
+	"cs-attr-route": {
+		"prefix": "cs-attr-route",
+		"body": [
+			"[Route(\"api/[controller]\")]"
+		],
+		"description": "Route attribute for controller"
+	},
+	"cs-private-field": {
+		"prefix": "cs-private-field",
+		"body": [
+			"private readonly ${1:Type} ${2:_fieldName};"
+		],
+		"description": "Private readonly field"
+	},
+	"cs-method-void": {
+		"prefix": "cs-method-void",
+		"body": [
+			"public void ${1:MethodName}(${2})",
+			"{",
+			"    ${3:// method body here}",
+			"}"
+		],
+		"description": "Public void method definition"
+	},
+	"cs-lambda-block": {
+		"prefix": "cs-lambda",
+		"body": [
+			"${1:object} =>",
+			"{",
+			"    ${2:// logic here}",
+			"}"
+		],
+		"description": "Lambda expression with block body"
+	},
+	"cs-assign-end": {
+		"prefix": "cs-assign",
+		"body": [
+			"${1:PropertyName} = ${2:value}${3:,}"
+		],
+		"description": "Assignment line ending with comma or semicolon"
+	}
+}

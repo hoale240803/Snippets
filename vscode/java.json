@@ -1,0 +1,234 @@
+{
+	"jav-log": {
+		"prefix": "jav-log",
+		"body": [
+			"System.out.println($1);"
+		],
+		"description": "Java System.out.println"
+	},
+	"jav-var": {
+		"prefix": "jav-var",
+		"body": [
+			"int $1 = $2;"
+		],
+		"description": "Java Variable Declaration"
+	},
+	"jav-const": {
+		"prefix": "jav-const",
+		"body": [
+			"final $1Type $2 = $3;"
+		],
+		"description": "Java Constant Declaration"
+	},
+	"jav-if": {
+		"prefix": "jav-if",
+		"body": [
+			"if ($1) {",
+			"    $2",
+			"}"
+		],
+		"description": "Java If Condition"
+	},
+	"jav-else": {
+		"prefix": "jav-else",
+		"body": [
+			"else {",
+			"    $1",
+			"}"
+		],
+		"description": "Java Else Condition"
+	},
+	"jav-for": {
+		"prefix": "jav-for",
+		"body": [
+			"for (int i = 0; i < $1; i++) {",
+			"    $2",
+			"}"
+		],
+		"description": "Java For Loop"
+	},
+	"jav-while": {
+		"prefix": "jav-while",
+		"body": [
+			"while ($1) {",
+			"    $2",
+			"}"
+		],
+		"description": "Java While Loop"
+	},
+	"jav-func": {
+		"prefix": "jav-func",
+		"body": [
+			"void $1() {",
+			"    $2",
+			"}"
+		],
+		"description": "Java Function"
+	},
+	"jav-return": {
+		"prefix": "jav-return",
+		"body": [
+			"return $1;"
+		],
+		"description": "Java Return Statement"
+	},
+	"jav-array": {
+		"prefix": "jav-array",
+		"body": [
+			"int[] $1 = {$2};"
+		],
+		"description": "Java Array Declaration"
+	},
+	"jav-class": {
+		"prefix": "jav-class",
+		"body": [
+			"public class $1 {",
+			"    $2",
+			"}"
+		],
+		"description": "Java Class Declaration"
+	},
+	"jav-new": {
+		"prefix": "jav-new",
+		"body": [
+			"$1 $2 = new $1();"
+		],
+		"description": "Java New Object"
+	},
+	"jav-cmt": {
+		"prefix": "jav-cmt",
+		"body": [
+			"// $1"
+		],
+		"description": "Java Single-line Comment"
+	},
+	"jav-mcmt": {
+		"prefix": "jav-mcmt",
+		"body": [
+			"/*",
+			" $1",
+			"*/"
+		],
+		"description": "Java Multi-line Comment"
+	},
+	"jav-try": {
+		"prefix": "jav-try",
+		"body": [
+			"try {",
+			"    $1",
+			"} catch (Exception e) {",
+			"    $2",
+			"}"
+		],
+		"description": "Java Try-Catch Block"
+	},
+	"jav-switch": {
+		"prefix": "jav-switch",
+		"body": [
+			"switch ($1) {",
+			"    case $2:",
+			"        $3",
+			"        break;",
+			"}"
+		],
+		"description": "Java Switch Case"
+	},
+	"jav-str": {
+		"prefix": "jav-str",
+		"body": [
+			"String $1 = \"$2\";"
+		],
+		"description": "Java String Declaration"
+	},
+	"jav-strint": {
+		"prefix": "jav-strint",
+		"body": [
+			"\"Hello \" + $1"
+		],
+		"description": "Java String Interpolation (manual concat)"
+	},
+	"jav-null": {
+		"prefix": "jav-null",
+		"body": [
+			"if ($1 != null) {",
+			"    $2",
+			"}"
+		],
+		"description": "Java Null Check"
+	},
+	"jav-len": {
+		"prefix": "jav-len",
+		"body": [
+			"$1.length"
+		],
+		"description": "Java Array/List Length"
+	},
+	"jav-bool": {
+		"prefix": "jav-bool",
+		"body": [
+			"boolean $1 = $2;"
+		],
+		"description": "Java Boolean Declaration"
+	},
+	"jav-input": {
+		"prefix": "jav-input",
+		"body": [
+			"import java.util.Scanner;",
+			"Scanner scanner = new Scanner(System.in);",
+			"$1 = scanner.nextLine();"
+		],
+		"description": "Java Console Input with Scanner"
+	},
+	"jav-break": {
+		"prefix": "jav-break",
+		"body": [
+			"break;"
+		],
+		"description": "Java Break"
+	},
+	"jav-continue": {
+		"prefix": "jav-continue",
+		"body": [
+			"continue;"
+		],
+		"description": "Java Continue"
+	},
+	"jav-import": {
+		"prefix": "jav-import",
+		"body": [
+			"import $1;"
+		],
+		"description": "Java Import"
+	},
+	"jav-filerd": {
+		"prefix": "jav-filerd",
+		"body": [
+			"import java.nio.file.*;",
+			"String content = new String(Files.readAllBytes(Paths.get(\"$1\")));"
+		],
+		"description": "Java Read File with NIO"
+	},
+	"jav-sleep": {
+		"prefix": "jav-sleep",
+		"body": [
+			"Thread.sleep($1);"
+		],
+		"description": "Java Sleep"
+	},
+	"jav-random": {
+		"prefix": "jav-random",
+		"body": [
+			"import java.util.Random;",
+			"Random rand = new Random();",
+			"int randomNum = rand.nextInt();"
+		],
+		"description": "Java Random Number"
+	},
+	"jav-upper": {
+		"prefix": "jav-upper",
+		"body": [
+			"$1.toUpperCase();"
+		],
+		"description": "Java String to UpperCase"
+	}
+}

@@ -1,0 +1,221 @@
+{
+	"py-log": {
+		"prefix": "py-log",
+		"body": [
+			"print($1)"
+		],
+		"description": "Python Print"
+	},
+	"py-var": {
+		"prefix": "py-var",
+		"body": [
+			"$1 = $2"
+		],
+		"description": "Python Variable Assignment"
+	},
+	"py-const": {
+		"prefix": "py-const",
+		"body": [
+			"$1_CONSTANT = $2"
+		],
+		"description": "Python Constant Convention"
+	},
+	"py-if": {
+		"prefix": "py-if",
+		"body": [
+			"if $1:",
+			"    $2"
+		],
+		"description": "Python If Condition"
+	},
+	"py-else": {
+		"prefix": "py-else",
+		"body": [
+			"else:",
+			"    $1"
+		],
+		"description": "Python Else Condition"
+	},
+	"py-for": {
+		"prefix": "py-for",
+		"body": [
+			"for $1 in range($2):",
+			"    $3"
+		],
+		"description": "Python For Loop"
+	},
+	"py-while": {
+		"prefix": "py-while",
+		"body": [
+			"while $1:",
+			"    $2"
+		],
+		"description": "Python While Loop"
+	},
+	"py-func": {
+		"prefix": "py-func",
+		"body": [
+			"def $1($2):",
+			"    $3"
+		],
+		"description": "Python Function Definition"
+	},
+	"py-return": {
+		"prefix": "py-return",
+		"body": [
+			"return $1"
+		],
+		"description": "Python Return Statement"
+	},
+	"py-array": {
+		"prefix": "py-array",
+		"body": [
+			"$1 = [$2]"
+		],
+		"description": "Python List Declaration"
+	},
+	"py-class": {
+		"prefix": "py-class",
+		"body": [
+			"class $1:",
+			"    def __init__(self, $2):",
+			"        $3"
+		],
+		"description": "Python Class Declaration"
+	},
+	"py-new": {
+		"prefix": "py-new",
+		"body": [
+			"$1 = $2()"
+		],
+		"description": "Python New Object"
+	},
+	"py-cmt": {
+		"prefix": "py-cmt",
+		"body": [
+			"# $1"
+		],
+		"description": "Python Single-line Comment"
+	},
+	"py-mcmt": {
+		"prefix": "py-mcmt",
+		"body": [
+			"'''",
+			"$1",
+			"'''"
+		],
+		"description": "Python Multi-line Comment"
+	},
+	"py-try": {
+		"prefix": "py-try",
+		"body": [
+			"try:",
+			"    $1",
+			"except Exception as e:",
+			"    $2"
+		],
+		"description": "Python Try Except Block"
+	},
+	"py-switch": {
+		"prefix": "py-switch",
+		"body": [
+			"# No native switch, use if-elif-else"
+		],
+		"description": "Python Switch Alternative (Comment)"
+	},
+	"py-str": {
+		"prefix": "py-str",
+		"body": [
+			"$1 = \"$2\""
+		],
+		"description": "Python String Declaration"
+	},
+	"py-strint": {
+		"prefix": "py-strint",
+		"body": [
+			"f\"Hello {$1}\""
+		],
+		"description": "Python String Interpolation (f-string)"
+	},
+	"py-null": {
+		"prefix": "py-null",
+		"body": [
+			"if $1 is not None:",
+			"    $2"
+		],
+		"description": "Python None Check"
+	},
+	"py-len": {
+		"prefix": "py-len",
+		"body": [
+			"len($1)"
+		],
+		"description": "Python Length Function"
+	},
+	"py-bool": {
+		"prefix": "py-bool",
+		"body": [
+			"$1 = True  # or False"
+		],
+		"description": "Python Boolean Declaration"
+	},
+	"py-input": {
+		"prefix": "py-input",
+		"body": [
+			"input('$1')"
+		],
+		"description": "Python Input Function"
+	},
+	"py-break": {
+		"prefix": "py-break",
+		"body": [
+			"break"
+		],
+		"description": "Python Break"
+	},
+	"py-continue": {
+		"prefix": "py-continue",
+		"body": [
+			"continue"
+		],
+		"description": "Python Continue"
+	},
+	"py-import": {
+		"prefix": "py-import",
+		"body": [
+			"import $1"
+		],
+		"description": "Python Import Module"
+	},
+	"py-filerd": {
+		"prefix": "py-filerd",
+		"body": [
+			"with open('$1', 'r') as f:",
+			"    data = f.read()"
+		],
+		"description": "Python File Read"
+	},
+	"py-sleep": {
+		"prefix": "py-sleep",
+		"body": [
+			"import time",
+			"time.sleep($1)"
+		],
+		"description": "Python Sleep Time"
+	},
+	"py-random": {
+		"prefix": "py-random",
+		"body": [
+			"import random",
+			"random.random()"
+		],
+		"description": "Python Random Number"
+	},
+	"py-upper": {
+		"prefix": "py-upper",
+		"body": [
+			"$1.upper()"
+		],
+		"description": "Python String Uppercase"
+	}
+}

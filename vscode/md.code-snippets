@@ -1,0 +1,44 @@
+{
+  "markdown-strong-header": {
+    "prefix": "md-strong-header",
+    "body": "**${1:Strong Header Text}**",
+    "description": "Insert large bold text (GitHub-style ****strong**** header)",
+    "scope": "markdown"
+  },
+  "markdown-link": {
+    "prefix": "md-link",
+    "body": "[${1:text}](${2:url})",
+    "description": "Insert a Markdown link",
+    "scope": "markdown"
+  },
+  "markdown-image": {
+    "prefix": "md-img",
+    "body": "![${1:alt text}](${2:image-url})",
+    "description": "Insert a Markdown image",
+    "scope": "markdown"
+  },
+  "markdown-table": {
+    "prefix": "md-table",
+    "body": [
+      "| ${1:Header1} | ${2:Header2} | ${3:Header3} |",
+      "|--------------|--------------|--------------|",
+      "| ${4:Cell1}   | ${5:Cell2}   | ${6:Cell3}   |",
+      "| ${7:Cell4}   | ${8:Cell5}   | ${9:Cell6}   |"
+    ],
+    "description": "Insert a Markdown table",
+    "scope": "markdown"
+  },
+  "markdown-toggle": {
+    "prefix": "md-toggle",
+    "body": [
+      "<details>",
+      "<summary>${1:Click to expand}</summary>",
+      "",
+      "${2:Content goes here}",
+      "",
+      "</details>"
+    ],
+    "description": "Insert a collapsible toggle section (GitHub Flavored Markdown)",
+    "scope": "markdown"
+  },
+}

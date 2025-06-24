@@ -1,0 +1,165 @@
+{
+  "Blazor Component": {
+    "prefix": "blazor-component",
+    "body": [
+      "@page \"/${1:route}\"",
+      "",
+      "<h3>${2:ComponentName}</h3>",
+      "",
+      "@code {",
+      "    // Component logic here",
+      "    $0",
+      "}"
+    ],
+    "description": "Basic Blazor component structure"
+  },
+
+  "Two-Way Binding": {
+    "prefix": "blazor-bind",
+    "body": [
+      "<input @bind=\"${1:property}\" @bind:event=\"oninput\" />",
+      "",
+      "@code {",
+      "    private ${2:string} ${1:property} { get; set; }",
+      "}"
+    ],
+    "description": "Two-way data binding with input"
+  },
+
+  "Event Handler": {
+    "prefix": "blazor-event",
+    "body": [
+      "<button @onclick=\"${1:HandleClick}\">${2:Click Me}</button>",
+      "",
+      "@code {",
+      "    private void ${1:HandleClick}()",
+      "    {",
+      "        ${0:// Logic}",
+      "    }",
+      "}"
+    ],
+    "description": "Click event handler"
+  },
+
+  "Component Parameter": {
+    "prefix": "blazor-param",
+    "body": [
+      "[Parameter]",
+      "public ${1:string} ${2:ParamName} { get; set; }$0"
+    ],
+    "description": "Component parameter declaration"
+  },
+
+  "Lifecycle Method": {
+    "prefix": "blazor-lifecycle",
+    "body": [
+      "protected override ${1:async Task }${2:OnInitializedAsync}()",
+      "{",
+      "    ${0:// Logic}",
+      "    ${1:return base.${2:OnInitializedAsync}();}",
+      "}"
+    ],
+    "description": "Component lifecycle method"
+  },
+
+  "Conditional Rendering": {
+    "prefix": "blazor-if",
+    "body": [
+      "@if (${1:condition})",
+      "{",
+      "    ${0:<p>Content</p>}",
+      "}",
+      "else",
+      "{",
+      "    <p>Else content</p>",
+      "}"
+    ],
+    "description": "Conditional rendering block"
+  },
+
+  "Foreach Loop": {
+    "prefix": "blazor-foreach",
+    "body": [
+      "@foreach (var ${1:item} in ${2:items})",
+      "{",
+      "    <li>@${1:item}.${3:Property}</li>",
+      "    $0",
+      "}"
+    ],
+    "description": "Foreach rendering loop"
+  },
+
+  "Navigation": {
+    "prefix": "blazor-nav",
+    "body": [
+      "@inject NavigationManager ${1:Nav}",
+      "",
+      "<button @onclick=\"() => ${1:Nav}.NavigateTo(\"/${2:route}\")\">",
+      "    ${3:Go To Page}",
+      "</button>$0"
+    ],
+    "description": "Programmatic navigation"
+  },
+
+  "Form with Validation": {
+    "prefix": "blazor-form",
+    "body": [
+      "<EditForm Model=\"@${1:model}\" OnValidSubmit=\"${2:HandleSubmit}\">",
+      "    <DataAnnotationsValidator />",
+      "    <ValidationSummary />",
+      "    ",
+      "    <InputText @bind-Value=\"${1:model}.${3:Property}\" />",
+      "    ",
+      "    <button type=\"submit\">Submit</button>",
+      "</EditForm>",
+      "",
+      "@code {",
+      "    private ${4:ModelClass} ${1:model} = new();",
+      "    ",
+      "    private void ${2:HandleSubmit}()",
+      "    {",
+      "        ${0:// Submission logic}",
+      "    }",
+      "}"
+    ],
+    "description": "Complete form with validation"
+  },
+
+  "JS Interop": {
+    "prefix": "blazor-js",
+    "body": [
+      "@inject IJSRuntime ${1:JS}",
+      "",
+      "@code {",
+      "    private ${2:async Task }${3:CallJSFunction}()",
+      "    {",
+      "        ${2:await }${1:JS}.InvokeVoidAsync(\"${4:jsFunction}\"${5:, args});",
+      "    }",
+      "}$0"
+    ],
+    "description": "JavaScript interop call"
+  },
+
+  "Cascading Value": {
+    "prefix": "blazor-cascade",
+    "body": [
+      "<CascadingValue Value=\"${1:this}\">",
+      "    ${0:<!-- Child components -->}",
+      "</CascadingValue>",
+      "",
+      "@code {",
+      "    [CascadingParameter]",
+      "    public ${2:ParentType} ${3:Parent} { get; set; }",
+      "}"
+    ],
+    "description": "Cascading value/provider pattern"
+  },
+
+  "Blazor Service Injection": {
+    "prefix": "blazor-service",
+    "body": [
+      "@inject ${1:IService} ${2:Service}$0"
+    ],
+    "description": "Dependency injection"
+  }
+}

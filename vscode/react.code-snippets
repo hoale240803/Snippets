@@ -1,0 +1,298 @@
+{
+    "export": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "export",
+        "body": [
+            "export ${2:name} ${3:from} ${1:source};"
+        ],
+        "description": "Export named constant"
+    },
+    "react-functional-component": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-fc",
+        "body": [
+            "const $1 = () => {",
+            "  return (",
+            "    <div>",
+            "      $2",
+            "    </div>",
+            "  );",
+            "};",
+            "",
+            "export default $1;"
+        ],
+        "description": "React Functional Component"
+    },
+    "react-useState": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-useState",
+        "body": [
+            "const [$1, set$1] = useState($2);"
+        ],
+        "description": "useState Hook"
+    },
+    "react-useEffect": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-useEffect",
+        "body": [
+            "useEffect(() => {",
+            "  $1",
+            "}, [$2]);"
+        ],
+        "description": "useEffect Hook"
+    },
+    "react-useRef": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-useRef",
+        "body": [
+            "const $1 = useRef(null);"
+        ],
+        "description": "useRef Hook"
+    },
+    "react-onClick": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-onClick",
+        "body": [
+            "onClick={() => { $1 }}"
+        ],
+        "description": "onClick Event"
+    },
+    "react-onChange": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-onChange",
+        "body": [
+            "onChange={(e) => { $1 }}"
+        ],
+        "description": "onChange Event"
+    },
+    "react-map": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-map",
+        "body": [
+            "{$1.map((item, index) => (",
+            "  <div key={index}>",
+            "    {item.$2}",
+            "  </div>",
+            "))}"
+        ],
+        "description": "Map Through Array"
+    },
+    "react-conditional-render": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-if",
+        "body": [
+            "{ $1 && (",
+            "  <div>",
+            "    $2",
+            "  </div>",
+            ")}"
+        ],
+        "description": "Conditional Render"
+    },
+    "react-fragment": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-fragment",
+        "body": [
+            "<>",
+            "  $1",
+            "</>"
+        ],
+        "description": "React Fragment"
+    },
+    "react-router-basic": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-router-basic",
+        "body": [
+            "<Router>",
+            "  <Switch>",
+            "    <Route path=\"$1\">",
+            "      <$2 />",
+            "    </Route>",
+            "  </Switch>",
+            "</Router>"
+        ],
+        "description": "Basic Router Setup"
+    },
+    "react-link": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-link",
+        "body": [
+            "<Link to=\"$1\">$2</Link>"
+        ],
+        "description": "React Router Link"
+    },
+    "react-input": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-input",
+        "body": [
+            "<input",
+            "  type=\"$1\"",
+            "  value={$2}",
+            "  onChange={(e) => set$2(e.target.value)}",
+            "/>"
+        ],
+        "description": "Controlled Input"
+    },
+    "react-button": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-button",
+        "body": [
+            "<button type=\"button\" onClick={$1}>",
+            "  $2",
+            "</button>"
+        ],
+        "description": "Button Element"
+    },
+    "react-useContext": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-useContext",
+        "body": [
+            "const $1 = useContext($2);"
+        ],
+        "description": "useContext Hook"
+    },
+    "react-createContext": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-createContext",
+        "body": [
+            "const $1 = createContext();"
+        ],
+        "description": "Create Context"
+    },
+    "react-context-provider": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-context-provider",
+        "body": [
+            "<$1.Provider value={$2}>",
+            "  $3",
+            "</$1.Provider>"
+        ],
+        "description": "Context Provider"
+    },
+    "react-form": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-form",
+        "body": [
+            "<form onSubmit={handleSubmit}>",
+            "  $1",
+            "</form>"
+        ],
+        "description": "Form Element"
+    },
+    "react-useReducer": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-useReducer",
+        "body": [
+            "const initialState = {};",
+            "const reducer = (state, action) => {",
+            "  switch (action.type) {",
+            "    case '$1':",
+            "      return {...state, $2};",
+            "    default:",
+            "      return state;",
+            "  }",
+            "};",
+            "const [state, dispatch] = useReducer(reducer, initialState);"
+        ],
+        "description": "useReducer Hook"
+    },
+    "react-useMemo": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-useMemo",
+        "body": [
+            "const $1 = useMemo(() => {",
+            "  return $2;",
+            "}, [$3]);"
+        ],
+        "description": "useMemo Hook"
+    },
+    "react-useCallback": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-useCallback",
+        "body": [
+            "const $1 = useCallback(() => {",
+            "  $2",
+            "}, [$3]);"
+        ],
+        "description": "useCallback Hook"
+    },
+    "react-useLayoutEffect": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-useLayoutEffect",
+        "body": [
+            "useLayoutEffect(() => {",
+            "  $1",
+            "}, [$2]);"
+        ],
+        "description": "useLayoutEffect Hook"
+    },
+    "react-useId": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-useId",
+        "body": [
+            "const id = useId();"
+        ],
+        "description": "useId Hook"
+    },
+    "react-error-boundary": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-error-boundary",
+        "body": [
+            "class ErrorBoundary extends React.Component {",
+            "  constructor(props) {",
+            "    super(props);",
+            "    this.state = { hasError: false };",
+            "  }",
+            "  static getDerivedStateFromError(error) {",
+            "    return { hasError: true };",
+            "  }",
+            "  componentDidCatch(error, errorInfo) {",
+            "    console.error(error, errorInfo);",
+            "  }",
+            "  render() {",
+            "    if (this.state.hasError) {",
+            "      return <h1>Something went wrong.</h1>;",
+            "    }",
+            "    return this.props.children; ",
+            "  }",
+            "}"
+        ],
+        "description": "React Error Boundary Class Component"
+    },
+    "react-suspense-lazy": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "react-suspense-lazy",
+        "body": [
+            "const $1 = React.lazy(() => import('$2'));",
+            "",
+            "<Suspense fallback={<div>Loading...</div>}>",
+            "  <$1 />",
+            "</Suspense>"
+        ],
+        "description": "React Suspense and Lazy Loading"
+    },
+    "Div with cx className": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "divcx",
+        "body": [
+            "<div className={cx('${1:name}')}>\n\t$0\n</div>"
+        ],
+        "description": "JSX div with className using cx()"
+    },
+    "React Arrow Function Component Export": {
+        "scope": "javascript,typescript,jsx,tsx",
+        "prefix": "rafcex",
+        "body": [
+            "const ${1:AccountItem} = ({ ${2:data} }) => {",
+            "  return (",
+            "    <div>",
+            "      $0",
+            "    </div>",
+            "  );",
+            "};",
+            "",
+            "export default $1;"
+        ],
+        "description": "React arrow function component with export default"
+    }
+}
